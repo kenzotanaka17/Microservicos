@@ -11,5 +11,5 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'aula8-5';
 
-  desabilitado : boolean = false;
+  imageUrl: String = "https://picsum.photos/200/300";
 }
