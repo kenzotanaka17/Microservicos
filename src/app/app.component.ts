@@ -9,7 +9,27 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'aula8-5';
+  title = 'introducao-angular';
 
-  imageUrl: String = "https://picsum.photos/200/300";
+  isMouseOver: boolean = false;
+  valorAtual: string = '';
+  valorSalvo: string = '';
+  desabilitado : boolean = false;
+
+  botaoClicado() {
+    alert('Botão clicado!');
+    this.desabilitado = !this.desabilitado;
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    this.valorAtual = event.key;
+  }
+
+  salvarValor(event: any) {
+    this.valorSalvo = event;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
+  }
 }
